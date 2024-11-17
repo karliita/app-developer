@@ -1,0 +1,35 @@
+<ion-list>
+  <ion-text color="primary">
+    <h2>Resultado:</h2>
+  </ion-text>
+  @for(item of numeros; track item.num){
+
+  <span
+    class="{{
+      item.verde ? 'verde' : item.rojo ? 'rojo' : item.azul ? 'azul' : 'negro'
+    }}"
+    >{{ item.num }}
+  </span>
+
+  }
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Multiplos de 3 (<span class="verde">{{ multiplos_colors.verde }}</span
+        >)</ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Multiplos de 5 (<span class="rojo">{{ multiplos_colors.rojo }}</span
+        >)</ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Multiplos de 7 (<span class="azul">{{ multiplos_colors.azul }}</span
+        >)</ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-list>
